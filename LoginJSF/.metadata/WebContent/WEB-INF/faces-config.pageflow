@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16050054804910" configfile="/LoginJSF/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Login.xhtml" id="pf16050060075326" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16050060075327 pf16050060075328" path="/Login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Pirata.xhtml" x="120" y="192" id="pf16050060075329" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16050060075327" path="/Pirata.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Kaixo.xhtml" x="192" y="48" id="pf160500600753210" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf16050060075328" path="/Kaixo.xhtml"/>
+  <links id="pf16050060075327" target="pf16050060075329" source="pf16050060075326" outcome="error"/>
+  <links id="pf16050060075328" target="pf160500600753210" source="pf16050060075326" outcome="ok"/>
+</pageflow:Pageflow>
