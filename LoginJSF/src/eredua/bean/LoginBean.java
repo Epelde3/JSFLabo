@@ -2,37 +2,56 @@ package eredua.bean;
 
 import java.util.Date;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+
+import org.primefaces.event.SelectEvent;
+
 public class LoginBean {
 	private String izena;
 	private String pasahitza;
 	private Date data;
-	
-	
+
 	public LoginBean() {
-		
+
 	}
+
 	public String getIzena() {
 		return izena;
 	}
+
 	public void setIzena(String izena) {
 		this.izena = izena;
 	}
+
 	public String getPasahitza() {
 		return pasahitza;
 	}
+
 	public void setPasahitza(String pasahitza) {
 		this.pasahitza = pasahitza;
 	}
+
 	public Date getData() {
 		return data;
 	}
+
 	public void setData(Date data) {
 		this.data = data;
 	}
+
 	public String egiaztatu() {
-		if (izena.equals("pirata")) return "error";
-		else return "ok";
+		if(izena.length()!=pasahitza.length()) {
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Errorea pasahitza eta erabiltzaileak ez dute luzeera berdina"));
+			return null;
 		}
-	
+		if (izena.equals("pirata"))
+			return "error";
+		else
+			return "ok";
+	}
+	public void onDateSelect(SelectEvent event) {
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Data aukeratua: "+event.getObject()));
+	}
 
 }
