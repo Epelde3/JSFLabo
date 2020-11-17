@@ -1,6 +1,8 @@
 package eredua.bean;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -11,9 +13,11 @@ public class LoginBean {
 	private String izena;
 	private String pasahitza;
 	private Date data;
+	private ErabiltzailearenMota mota;
+	private static List<ErabiltzailearenMota> motak=new ArrayList<ErabiltzailearenMota>();
 
 	public LoginBean() {
-
+	
 	}
 
 	public String getIzena() {

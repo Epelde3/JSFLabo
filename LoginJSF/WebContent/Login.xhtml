@@ -42,6 +42,13 @@
 					</p:calendar>
 					</td>
 				</tr>
+				<tr>
+				<td><h3>Erabiltzailearen mota:</h3></td>
+				<td> <h:selectOneMenu value="#{login.mota}"/>
+				 <f:selectItems value="#{login.motak}"/>
+				</td>
+				
+				</tr>
 			</table>
 			<p>
 				<h:commandButton value="Onartu" action="#{login.egiaztatu}" />
